@@ -4,7 +4,6 @@ import (
 	"flag"
 	"fmt"
 	"github.com/fsnotify/fsnotify"
-	"github.com/go-tron/random"
 	"github.com/spf13/pflag"
 	"github.com/spf13/viper"
 	"log"
@@ -22,7 +21,7 @@ func New() *Config {
 	v.SetDefault("cluster.namespace", "")
 	v.SetDefault("cluster.nodeName", "node-0")
 	v.SetDefault("cluster.nodeIP", "127.0.0.1")
-	v.SetDefault("cluster.podName", "localhost-"+random.String(10))
+	v.SetDefault("cluster.podName", "localhost-0")
 	v.SetDefault("cluster.podIP", "127.0.0.1")
 	v.SetDefault("cluster.dnsSuffix", "")
 
